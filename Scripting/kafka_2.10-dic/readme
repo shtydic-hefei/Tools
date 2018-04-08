@@ -1,0 +1,32 @@
+确保安装上jdk1.7以上版本并在/etc/profile配置JAVA_HOME
+chmod +x kafka_2.10-jgc.bin
+./kafka_2.10-jgc.bin
+执行即可
+启动命令
+/home/kafka_2.10-0.10.0.0/kafkaStart.sh
+
+停止命令
+/home/kafka_2.10-0.10.0.0/kafkaStop.sh
+ps -ef |grep /home/kafka_2.10-0.10.0.0|awk {'print $2'} | sed -e "s/^/kill -9 /g" | sh -
+
+
+操作命令
+
+创建主题
+/home/kafka_2.10-0.10.0.0/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:2181 --replication-factor 1 --partitions 4 --topic  neo4j
+
+列出所有主题
+/home/kafka_2.10-0.10.0.0/bin/kafka-topics.sh --zookeeper 127.0.0.1:2181 --list
+
+打开 kafka 的neo4j 主题，可以输入任意字符 生产测试数据
+/home/kafka_2.10-0.10.0.0/bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic neo4j
+
+打开消费者端，可以接受消息
+/home/kafka_2.10-0.10.0.0/bin/kafka-console-consumer.sh  --zookeeper 127.0.0.1:2181 --topic neo4j --from-beginning
+
+删除主题
+/home/kafka_2.10-0.10.0.0/bin/kafka-topics.sh  --delete --zookeeper 127.0.0.1:2181  --topic neo4j
+
+/home/kafka_2.10-0.10.0.0/bin/kafka-console-consumer.sh  --zookeeper 127.0.0.1:2181 --topic neo4j --consumer.config /home/kafka_2.10-0.10.0.0/config/consumer.properties
+
+
