@@ -1,0 +1,2 @@
+启动 /usr/local/nginx/sbin/nginx
+关闭 /usr/local/nginx/sbin/nginx -s stop
