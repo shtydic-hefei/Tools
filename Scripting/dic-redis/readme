@@ -1,0 +1,5 @@
+默认密码 tydic
+启动 service redis start
+关闭 /home/redis-3.0.0-rc2/src/redis-cli
+     auth tydic
+     shutdowm
