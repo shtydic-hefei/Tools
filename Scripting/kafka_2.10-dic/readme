@@ -1,7 +1,16 @@
+概述
+Linux kafka 单机版
+kafka_2.10-dic.bin 由于文件过大，并未上传
+
+安装步骤
+
 确保安装上jdk1.7以上版本并在/etc/profile配置JAVA_HOME
-chmod +x kafka_2.10-jgc.bin
-./kafka_2.10-jgc.bin
+chmod +x kafka_2.10-dic.bin
+./kafka_2.10-dic.bin
 执行即可
+
+管理命令
+
 启动命令
 /home/kafka_2.10-0.10.0.0/kafkaStart.sh
 
