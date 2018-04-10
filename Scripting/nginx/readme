@@ -1,2 +1,10 @@
+概述
+Linux nginx-1.10版本
+
+安装步骤
+chmod +x nginx.1.10-dic.bin
+./nginx.1.10-dic.bin
+
+管理命令
 启动 /usr/local/nginx/sbin/nginx
 关闭 /usr/local/nginx/sbin/nginx -s stop
