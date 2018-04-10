@@ -1,5 +1,16 @@
-默认密码 tydic
+概述 
+该bin文件为redis-3.0.0-rc2版本放到linux一键执行即可，默认密码 tydic
+
+安装说明
+1.把redis-3.0.0-rc2-dic.bin文件放到linux任意位置
+2.赋予可运行权限
+chmod +x redis-3.0.0-rc2-dic.bin
+3.运行
+./redis-3.0.0-rc2-dic.bin
+
+管理命令
+
 启动 service redis start
 关闭 /home/redis-3.0.0-rc2/src/redis-cli
-     auth tydic
-     shutdowm
+     auth tydic #进行验证
+     shutdowm # 输入关闭命令
